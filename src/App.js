@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import React, {useState, useEffect} from 'react';
+import Settings from './Settings/Settings';
+import Game from './Game/Game';
+import diff from '../node_modules/jest-diff';
 function App() {
+  const [showSettings, setShowSettings] = useState(true);
+  const [difficulty, setDifficulty] = useState(1);
+  const [mirroring, setMirroring] = useState(false)
+
+  console.log(mirroring)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="mainContainer" > 
+      
+        {
+        showSettings 
+        ? 
+        <Settings 
+            difficulty={difficulty}
+            setDifficulty = {setDifficulty}
+            mirroring={mirroring}
+            setMirroring = {setMirroring}
+            setShowSettings = {setShowSettings}/>
+        :
+        <Game 
+          difficulty = {difficulty}
+          mirroring = {mirroring}
+          setShowSettings = {setShowSettings}
+        
+        />
+          }
+    
     </div>
+   
   );
 }
 

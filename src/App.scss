@@ -1,0 +1,189 @@
+#mainContainer{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background-color: white;
+  left: 0px;
+  top:0px;
+  display: flex;
+  
+
+
+  #SettingsOverlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+
+    #SettingsMain{
+      position: relative;
+      background: white;
+      margin-top:100px;
+      width:70%;
+      height:70%;
+      margin-left:auto;
+      margin-right:auto;
+      vertical-align: middle;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      
+      #SettingsHeader{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        text-align: center;
+        width:300px;
+
+      }
+
+      #SettingsForm{
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        height:400px;
+        width: 300px;
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+        .settingPart{
+          text-align: center;
+
+          height:200px;
+
+          .settingPartDescription{
+            width:100%;
+            background: grey;
+            font-size:20px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+          }
+
+
+
+
+    }
+
+    
+  }
+
+
+  .centerContainer{
+    position: relative;
+    margin-top: auto;
+    display: inline;
+    width:750px;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right: auto;
+   
+    
+ 
+    .scoreContainer{
+      display: inline;
+      float: left;
+      position: relative;
+      width:248px;
+      height:550px;
+    }
+    #gameOverOverlay{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      display:flex;
+      animation: overlayAnimation 0.3s linear;
+
+      #gameOverOverlayCenter{
+        margin:auto;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        justify-content:space-evenly;
+        flex-direction: column; 
+        background: #eee;
+        border-radius: 10px;
+
+        #gameOverText{
+       
+          text-align: center;
+          vertical-align: middle;
+          height:20px;
+        }
+        #scoreText{
+          text-align: center;
+          vertical-align: middle;
+          height:20px;
+        }
+        #settingsButton{
+          background: grey;
+          width: 80%;
+          margin-left: 10%;
+          border-radius: 5px;
+          height:30px;
+        }
+        #newGameButton{
+          background: orange;
+          width: 80%;
+          margin-left: 10%;
+          border-radius: 5px;
+          height:30px;
+        }
+      }
+    }
+
+    .gameContainer{
+      
+      position: relative;
+      display: inline;
+      float: left;
+      width: 500px;
+      height:500px;
+      background-color: white;
+      border: 1px solid green;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      flex-basis: 0%;
+      
+
+      .field{
+       
+        width : 25px;
+        height: 25px;
+        
+
+      }
+      .snakeField{
+        width : 23px;
+        height: 23px;
+        border: 1px solid lightblue;
+        background-color: red;
+      
+
+      }
+
+      .elementField{
+        width : 23px;
+        height: 23px;
+        border: 1px solid lightblue;
+        background-color: blue;
+
+      }
+    }
+  }
+
+}
+
+@keyframes overlayAnimation {
+    from{background:rgba(0,0,0,0)}
+    to{background: rgba(0,0,0,0.4)}
+}
