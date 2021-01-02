@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.8cf17487.chunk.css",
-    "main.js": "/static/js/main.f7ac80e3.chunk.js",
-    "main.js.map": "/static/js/main.f7ac80e3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.20b2af9d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.20b2af9d.js.map",
-    "static/js/2.1fbb1c8d.chunk.js": "/static/js/2.1fbb1c8d.chunk.js",
-    "static/js/2.1fbb1c8d.chunk.js.map": "/static/js/2.1fbb1c8d.chunk.js.map",
-    "static/js/3.c575782a.chunk.js": "/static/js/3.c575782a.chunk.js",
-    "static/js/3.c575782a.chunk.js.map": "/static/js/3.c575782a.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.8cf17487.chunk.css.map": "/static/css/main.8cf17487.chunk.css.map",
-    "static/js/2.1fbb1c8d.chunk.js.LICENSE.txt": "/static/js/2.1fbb1c8d.chunk.js.LICENSE.txt"
+    "main.css": "/MerlinDerEchte/Snkae.git/static/css/main.05cdf5b4.chunk.css",
+    "main.js": "/MerlinDerEchte/Snkae.git/static/js/main.f457bf15.chunk.js",
+    "main.js.map": "/MerlinDerEchte/Snkae.git/static/js/main.f457bf15.chunk.js.map",
+    "runtime-main.js": "/MerlinDerEchte/Snkae.git/static/js/runtime-main.febb6e7d.js",
+    "runtime-main.js.map": "/MerlinDerEchte/Snkae.git/static/js/runtime-main.febb6e7d.js.map",
+    "static/js/2.3f830d91.chunk.js": "/MerlinDerEchte/Snkae.git/static/js/2.3f830d91.chunk.js",
+    "static/js/2.3f830d91.chunk.js.map": "/MerlinDerEchte/Snkae.git/static/js/2.3f830d91.chunk.js.map",
+    "static/js/3.4e354b53.chunk.js": "/MerlinDerEchte/Snkae.git/static/js/3.4e354b53.chunk.js",
+    "static/js/3.4e354b53.chunk.js.map": "/MerlinDerEchte/Snkae.git/static/js/3.4e354b53.chunk.js.map",
+    "index.html": "/MerlinDerEchte/Snkae.git/index.html",
+    "static/css/main.05cdf5b4.chunk.css.map": "/MerlinDerEchte/Snkae.git/static/css/main.05cdf5b4.chunk.css.map",
+    "static/js/2.3f830d91.chunk.js.LICENSE.txt": "/MerlinDerEchte/Snkae.git/static/js/2.3f830d91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.20b2af9d.js",
-    "static/js/2.1fbb1c8d.chunk.js",
-    "static/css/main.8cf17487.chunk.css",
-    "static/js/main.f7ac80e3.chunk.js"
+    "static/js/runtime-main.febb6e7d.js",
+    "static/js/2.3f830d91.chunk.js",
+    "static/css/main.05cdf5b4.chunk.css",
+    "static/js/main.f457bf15.chunk.js"
   ]
 }
