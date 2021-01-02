@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/MerlinDerEchte/Snkae.git/static/css/main.05cdf5b4.chunk.css",
-    "main.js": "/MerlinDerEchte/Snkae.git/static/js/main.f457bf15.chunk.js",
-    "main.js.map": "/MerlinDerEchte/Snkae.git/static/js/main.f457bf15.chunk.js.map",
-    "runtime-main.js": "/MerlinDerEchte/Snkae.git/static/js/runtime-main.febb6e7d.js",
-    "runtime-main.js.map": "/MerlinDerEchte/Snkae.git/static/js/runtime-main.febb6e7d.js.map",
-    "static/js/2.3f830d91.chunk.js": "/MerlinDerEchte/Snkae.git/static/js/2.3f830d91.chunk.js",
-    "static/js/2.3f830d91.chunk.js.map": "/MerlinDerEchte/Snkae.git/static/js/2.3f830d91.chunk.js.map",
-    "static/js/3.4e354b53.chunk.js": "/MerlinDerEchte/Snkae.git/static/js/3.4e354b53.chunk.js",
-    "static/js/3.4e354b53.chunk.js.map": "/MerlinDerEchte/Snkae.git/static/js/3.4e354b53.chunk.js.map",
-    "index.html": "/MerlinDerEchte/Snkae.git/index.html",
-    "static/css/main.05cdf5b4.chunk.css.map": "/MerlinDerEchte/Snkae.git/static/css/main.05cdf5b4.chunk.css.map",
-    "static/js/2.3f830d91.chunk.js.LICENSE.txt": "/MerlinDerEchte/Snkae.git/static/js/2.3f830d91.chunk.js.LICENSE.txt"
+    "main.css": "/Snkae/static/css/main.05cdf5b4.chunk.css",
+    "main.js": "/Snkae/static/js/main.f457bf15.chunk.js",
+    "main.js.map": "/Snkae/static/js/main.f457bf15.chunk.js.map",
+    "runtime-main.js": "/Snkae/static/js/runtime-main.fe7b4560.js",
+    "runtime-main.js.map": "/Snkae/static/js/runtime-main.fe7b4560.js.map",
+    "static/js/2.3f830d91.chunk.js": "/Snkae/static/js/2.3f830d91.chunk.js",
+    "static/js/2.3f830d91.chunk.js.map": "/Snkae/static/js/2.3f830d91.chunk.js.map",
+    "static/js/3.4e354b53.chunk.js": "/Snkae/static/js/3.4e354b53.chunk.js",
+    "static/js/3.4e354b53.chunk.js.map": "/Snkae/static/js/3.4e354b53.chunk.js.map",
+    "index.html": "/Snkae/index.html",
+    "static/css/main.05cdf5b4.chunk.css.map": "/Snkae/static/css/main.05cdf5b4.chunk.css.map",
+    "static/js/2.3f830d91.chunk.js.LICENSE.txt": "/Snkae/static/js/2.3f830d91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.febb6e7d.js",
+    "static/js/runtime-main.fe7b4560.js",
     "static/js/2.3f830d91.chunk.js",
     "static/css/main.05cdf5b4.chunk.css",
     "static/js/main.f457bf15.chunk.js"
