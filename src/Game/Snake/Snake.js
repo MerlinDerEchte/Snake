@@ -29,6 +29,10 @@ class Snake {
         return this.elements[0];
     }
 
+    getLength(){
+        return this.elements.length;
+    }
+
     move(){
         switch(this.direction){
             default: return;

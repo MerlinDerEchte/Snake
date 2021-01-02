@@ -167,15 +167,45 @@
         width : 25px;
         height: 25px;
         
+     
+      }
+      .shortSnakeField{
+        width : 23px;
+        height: 23px;
+        border: 1px solid rgb(220, 220, 220);
+        background-color: rgb(102, 102, 102);
+      
+      }
+      .middleSnakeField{
+        width : 23px;
+        height: 23px;
+        border: 1px solid white;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgb(221, 25, 166);
+        animation: snakeMiddleAnimation 0.2s linear;
+      }
+
+      .longSnakeField{
+
+        width : 23px;
+        height: 23px;
+        border: 1px solid orange;
+        color: orange;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgb(63, 12, 12);
+        animation: snakeLongAnimation 0.2s linear;
+
 
       }
-      .snakeField{
+      #snakeHead{
         width : 23px;
         height: 23px;
         border: 1px solid lightblue;
-        background-color: red;
-      
-
+        background-color: green;
+        border-radius:5px;
       }
 
       .elementField{
@@ -194,4 +224,15 @@
 @keyframes overlayAnimation {
     from{background:rgba(0,0,0,0)}
     to{background: rgba(0,0,0,0.4)}
+}
+
+@keyframes snakeMiddleAnimation{
+  from{ color: rgb(221, 25, 166);}
+  to{  color: white;}
+}
+
+@keyframes snakeLongAnimation{
+  from{ color: rgb(63, 12, 12);}
+  to{  color: orange;}
+
 }

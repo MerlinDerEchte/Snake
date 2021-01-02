@@ -22,7 +22,60 @@ function Game(props){
 
     console.log(props.mirroring)
 
-    
+
+    function checkAndAddTailElement(){
+        if(addElements.length > 0 && addElements[0].x === snake.getTail().x && addElements[0].y === snake.getTail().y)
+            {
+                
+                snake.addTailElement(addElements[0]);
+               
+                addElements.shift();
+                if(addElements.length === 0){
+                    snake.setEats(false);
+                }
+            }
+    }
+    function checkAndChangeSnakeDirection(){
+        if(newDirection){
+            snake.setDirection(newDirection);
+        }
+    }
+
+    function checkAndEatElement(){
+        if(snake.getHeadPosition().x === newElement.x &&
+        snake.getHeadPosition().y === newElement.y)
+        {
+            snake.setEats(true);
+                
+            addElements.push(newElement)
+            createNewElement(fieldHeight * fieldWidth);
+               
+            
+            setScore(score +1);
+        }
+    }
+    function checkMoveOrSetGameOver(){
+        
+        if(isInSnakeElements(snake.getHeadPosition().x + (snake.getHeadPosition().y * fieldHeight ), false))
+                 {
+                    console.log("hit snake")
+                    setGameOver(true);
+        }else if(   
+                (snake.elements[0].x === 0 && snake.direction === Directions.LEFT) || 
+                (snake.elements[0].x ===  fieldWidth -1 && snake.direction === Directions.RIGHT) || 
+                (snake.elements[0].y === 0 && snake.direction === Directions.TOP) ||
+                (snake.elements[0].y === fieldHeight-1 && snake.direction === Directions.BOTTOM))
+                {
+                if(props.mirroring){
+                    snake.mirrorMove(fieldWidth, fieldHeight);
+                }else{
+                    setGameOver(true);
+                }
+        }else{             
+            snake.move();
+        }
+    }
+
     function createNewElement(size){
         let i = 0;
         let possibleFieldIndizes = [];
@@ -38,6 +91,17 @@ function Game(props){
         setNewElement(newElement);
        
     }
+    function debounce(fn, delay) {  
+        var timer = null;  
+        return function() {  
+          var self = this,  
+              args = arguments;  
+          clearTimeout(timer);  
+          timer = setTimeout(function() {  
+            fn.apply(self, args);  
+          }, delay);  
+        };  
+      }
 
     function isInNewElement(index){
         let indexInElements = false;
@@ -75,6 +139,16 @@ function Game(props){
             return indexInElements; 
         }       
     }
+
+
+    function isSnakeHead(index){
+        const head = snake.elements[0];
+        if(index % fieldWidth === head.x && Math.floor(index/fieldHeight) === head.y){
+            return true;
+        }else{
+            return false;
+        }
+    }
     function onKeyPressed(e){
         if(!newDirection)
         
@@ -97,17 +171,7 @@ function Game(props){
         setAddElements([]);
         setRound(0);
     }
-    function debounce(fn, delay) {  
-        var timer = null;  
-        return function() {  
-          var self = this,  
-              args = arguments;  
-          clearTimeout(timer);  
-          timer = setTimeout(function() {  
-            fn.apply(self, args);  
-          }, delay);  
-        };  
-      }
+   
     var newDirection = null;
           
 
@@ -116,62 +180,6 @@ function Game(props){
     
     useEffect(()=> {
         
-        function checkAndEatElement(){
-            if(snake.getHeadPosition().x === newElement.x &&
-            snake.getHeadPosition().y === newElement.y)
-            {
-                snake.setEats(true);
-                    
-                addElements.push(newElement)
-                createNewElement(fieldHeight * fieldWidth);
-                   
-                
-                setScore(score +1);
-            }
-        }
-
-   
-        function checkAndAddTailElement(){
-            if(addElements.length > 0 && addElements[0].x === snake.getTail().x && addElements[0].y === snake.getTail().y)
-                {
-                    
-                    snake.addTailElement(addElements[0]);
-                   
-                    addElements.shift();
-                    if(addElements.length === 0){
-                        snake.setEats(false);
-                    }
-                }
-        }
-
-        function checkAndChangeSnakeDirection(){
-            if(newDirection){
-                snake.setDirection(newDirection);
-            }
-        }
-
-        function checkMoveOrSetGameOver(){
-            console.log(props.mirroring)
-            if(isInSnakeElements(snake.getHeadPosition().x + (snake.getHeadPosition().y * fieldHeight ), false))
-                     {
-                        console.log("hit snake")
-                        setGameOver(true);
-            }else if(   
-                    (snake.elements[0].x === 0 && snake.direction === Directions.LEFT) || 
-                    (snake.elements[0].x ===  fieldWidth -1 && snake.direction === Directions.RIGHT) || 
-                    (snake.elements[0].y === 0 && snake.direction === Directions.TOP) ||
-                    (snake.elements[0].y === fieldHeight-1 && snake.direction === Directions.BOTTOM))
-                    {
-                    if(props.mirroring){
-                        snake.mirrorMove(fieldWidth, fieldHeight);
-                    }else{
-                        setGameOver(true);
-                    }
-            }else{             
-                snake.move();
-            }
-        }
-
         if(!gameOver)
         {   
            
@@ -213,9 +221,18 @@ function Game(props){
                     ''
                     }
                     {fields.map((fields,index)=>{
-                        if(isInSnakeElements(index,true)){
-                            return(<div key={index} className="snakeField"></div>)
+                        if(isSnakeHead(index)){
+                            return(<div key={index} id="snakeHead"></div>)
+                        }else if(isInSnakeElements(index,false)){
 
+                            if(snake.getLength() <10){
+                                return(<div key={index} className="shortSnakeField"></div>)
+                            }else if(snake.getLength() < 30){
+                                return(<div key={index} className="middleSnakeField">o</div>)
+                            }else{
+                                return(<div key={index} className="longSnakeField">X</div>)
+                            }
+                           
                         }else if(isInNewElement(index)){
 
                             return(<div key={index} className="elementField"></div>)
