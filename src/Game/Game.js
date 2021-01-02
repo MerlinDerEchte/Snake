@@ -200,7 +200,7 @@ function Game(props){
     return(<>
             <div className="centerContainer">
                 <div className="scoreContainer">
-                score{score}
+                Score: {score}
                 </div>
                 <div className="gameContainer">
                     {gameOver 

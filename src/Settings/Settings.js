@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import ArrowBack from '@material-ui/icons/ArrowBack';
+import ArrowUpward from '@material-ui/icons/ArrowUpward';
+import ArrowForward from '@material-ui/icons/ArrowForward';
+import ArrowDownward from '@material-ui/icons/ArrowDownward';
 
 
 const difficulties =[1,2,3]
@@ -40,7 +44,21 @@ function Settings(props){
             <div id="SettingsMain">
                 <div id="SettingsHeader">Settings</div>
                 <form id="SettingsForm" onSubmit={e=> submitFunction(e)}>
-                 
+
+
+                        <div className="settingPart">
+                            <div className="settingPartDescription">Navigation</div>
+                            <div className="arrowContainer">
+                                <ArrowUpward />
+                            </div>
+                            <div className="arrowContainer">
+                                <ArrowBack />
+                                <ArrowDownward />
+                                <ArrowForward />
+                            </div>
+                        </div>
+
+
                         <div className="settingPart">
                             <div className="settingPartDescription">Difficulty</div>
                             <div className="">
