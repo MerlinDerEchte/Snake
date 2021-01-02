@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import GameOverOverlay from './GameOverOverlay/GameOverOverlay';
 import Snake from './Snake/Snake';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import Element from './Snake/Element';
 import Directions from './Snake/Directions';
 import { Dir } from 'fs';
@@ -235,7 +236,9 @@ function Game(props){
                            
                         }else if(isInNewElement(index)){
 
-                            return(<div key={index} className="elementField"></div>)
+                            return(<div key={index} className="elementField">
+                                        <TwitterIcon />
+                                    </div>)
 
                         }else{
 
